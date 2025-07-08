@@ -33,21 +33,18 @@ const Header = () => (
         </Link>
       </div>
       <nav className="hidden lg:flex items-center gap-6 text-sm">
-        <Link
-          to="https://www.whoisaria.co"
+        <a
+          href="https://whoisaria.co"
+          className="font-medium text-foregroundMuted hover:text-foreground transition-colors"
+        >
+          Aria
+        </a>
+        <a
+          href="https://blog.whoisaria.co"
           className="font-medium text-foregroundMuted hover:text-foreground transition-colors"
         >
           Blog
-        </Link>
-        <Link
-          to="/api-reference"
-          className="font-medium text-foregroundMuted hover:text-foreground transition-colors"
-        >
-          API Reference
-        </Link>
-        <Link to="#" className="font-medium text-foregroundMuted hover:text-foreground transition-colors">
-          GitHub
-        </Link>
+        </a>
       </nav>
       <Button className="hidden lg:flex" size="lg">
         Download Aria for macOS
@@ -92,7 +89,7 @@ export const DocSubSection = ({ title, children }: { title?: string; children: R
 export const CodeBlock = ({ children, lang = "typescript" }: { children: React.ReactNode; lang?: string }) => (
   <div className="my-6">
     <pre className="bg-backgroundSubtle text-foreground rounded-lg p-6 border border-border overflow-x-auto text-sm shadow-sm">
-      <code className={`language-${lang} font-mono`}>{children}</code>
+      <code className={`language-${lang} font-mono text-sm font-normal leading-5`}>{children}</code>
     </pre>
   </div>
 )
